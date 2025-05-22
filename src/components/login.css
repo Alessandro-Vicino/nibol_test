@@ -1,0 +1,65 @@
+
+.main-login{
+    
+    justify-content: center;
+    align-items: center;
+} 
+
+.login-title {
+    color: black; /* blu, puoi cambiare con il colore che vuoi */
+    font-size: 40px; /* opzionale: dimensione testo */
+    font-weight: bold; /* opzionale */
+}
+
+.login-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* Button Continue */
+.button-custom {
+    background-color: #ff3d00; /* colore arancione/rosso */
+    color: white;   
+    margin-top: 20px;          /* testo bianco */
+    padding: 10px 70px;       /* un po’ di spazio interno */
+    border: none;             /* niente bordo */
+    border-radius: 5px;       /* angoli arrotondati */
+    cursor: pointer;          /* cambia cursore al passaggio */
+    transition: background-color 0.3s ease; /* transizione morbida */
+}
+
+button:hover {
+    background-color: #e63600; /* colore leggermente più scuro al passaggio */
+}
+
+
+/*   */
+.link-custom{
+    text-decoration: none;       /* Rimuove il sottolineato */
+    color: #000;                 /* Colore del testo nero */
+    font-weight: bold;           /* Testo in grassetto */
+    transition: background 0.3s; /* Transizione morbida */
+    padding: 4px 8px;            /* Un po’ di spazio interno per l’effetto hover */
+    border-radius: 4px;          /* Angoli leggermente arrotondati */
+}
+
+.link-custom:hover {
+    color: #e63600; 
+}
+
+/* Sfondo o bordo sfumato grigio quando l'input è in focus */
+input.form-control:focus {
+  outline: none; /* rimuove il bordo di default blu */
+  box-shadow: 0 0 5px 2px rgba(128, 128, 128, 0.3); /* ombra grigia morbida */
+  border-color: #888888; /* cambia il bordo in grigio scuro */
+}
+
+/* Placeholder più chiari */
+input.form-control::placeholder {
+  color: #bfbfbf; /* grigio chiaro */
+  opacity: 1; /* forza la visibilità del colore */
+}
