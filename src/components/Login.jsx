@@ -13,7 +13,7 @@ function Login() {
         e.preventDefault();
 
         if (!email || !password) {
-            setMessage('Inserisci email e password');
+            setMessage('Enter email and password.');
             setMessageType('error');
             return;
         }
@@ -25,15 +25,15 @@ function Login() {
                 .first();
 
             if (!user) {
-                setMessage('Utente non registrato o credenziali errate');
+                setMessage('User not registered or incorrect credentials.');
                 setMessageType('error');
             } else {
-                setMessage('Login effettuato con successo!');
+                setMessage('Login successful!');
                 setMessageType('success');
                 // qui puoi anche fare redirect o salvare lo stato login
             }
         } catch (error) {
-            setMessage('Errore durante il login');
+            setMessage('Error during login.');
             setMessageType('error');
         }
     };
@@ -68,7 +68,7 @@ function Login() {
                                 type="email"
                                 className="form-control"
                                 id="inputEmail"
-                                placeholder="Inserisci l'email"
+                                placeholder="Email"
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
                             />
@@ -79,7 +79,7 @@ function Login() {
                                 type="password"
                                 className="form-control"
                                 id="inputPassword"
-                                placeholder="Inserisci la password"
+                                placeholder="Password"
                                 value={password}
                                 onChange={e => setPassword(e.target.value)}
                             />

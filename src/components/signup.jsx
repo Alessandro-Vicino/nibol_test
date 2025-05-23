@@ -45,7 +45,7 @@ function Signup() {
         e.preventDefault();
 
         if (!nome || !cognome || !email || !password || !termsAccepted) {
-            setMessage('Compila tutti i campi e accetta i termini.');
+            setMessage('Fill in all fields and accept the terms and conditions.');
             setMessageType('error');
             return;
         }
@@ -54,14 +54,14 @@ function Signup() {
             // Verifica se l'email è già registrata
             const existing = await db.users.where('email').equals(email).first();
             if (existing) {
-                setMessage('Email già registrata.');
+                setMessage('Email already registered.');
                 setMessageType('error');
                 return;
             }
 
             await db.users.add({ nome, cognome, email, password });
 
-            setMessage('Registrazione avvenuta con successo!');
+            setMessage('Registration successful!');
             setMessageType('success');
 
             setNome('');
@@ -70,7 +70,7 @@ function Signup() {
             setPassword('');
             setTermsAccepted(false);
         } catch (error) {
-            setMessage('Errore durante la registrazione.');
+            setMessage('Error during registration.');
             setMessageType('error');
         }
     };
@@ -104,7 +104,7 @@ function Signup() {
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Inserisci il nome"
+                                placeholder="Name"
                                 value={nome}
                                 onChange={e => setNome(e.target.value)}
                             />
@@ -114,7 +114,7 @@ function Signup() {
                             <input
                                 type="text"
                                 className="form-control"
-                                placeholder="Inserisci il cognome"
+                                placeholder="Surname"
                                 value={cognome}
                                 onChange={e => setCognome(e.target.value)}
                             />
@@ -124,7 +124,7 @@ function Signup() {
                             <input
                                 type="email"
                                 className="form-control"
-                                placeholder="Inserisci l'email"
+                                placeholder="Email"
                                 value={email}
                                 onChange={e => setEmail(e.target.value)}
                             />
@@ -134,7 +134,7 @@ function Signup() {
                             <input
                                 type="password"
                                 className="form-control"
-                                placeholder="Inserisci la password"
+                                placeholder="Password"
                                 value={password}
                                 onChange={e => setPassword(e.target.value)}
                             />
